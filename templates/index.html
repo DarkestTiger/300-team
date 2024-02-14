@@ -19,124 +19,661 @@
     />
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     <style>
-      @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-
-      p {
-        font-weight: bold;
-        font-size: 20px;
-      }
-
-      .background-banner {
-            background-image: linear-gradient(45deg,
-                    rgb(51 43 43 / 75%),
-                    rgb(20 19 20 / 61%)), url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/webjong/images/music_festival.jpg");
-            max-height: 100%;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+        /* Mobile - Portrait */
+        @media (max-width: 575px) {body {
+            max-height: 90%;
         }
 
-      .nav-item {
-          background-color: #fd6f00;
-          margin-left: 40px;
-          margin-right: 40px;
-          border-radius: 15px;
-      }
+        p {
+            font-weight: bold;
+            font-size: 20px;
+        }
 
-      .bg-custom {
-          border: 1px solid #fd6f00;
-          background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg");
-          background-position: center;
-          background-size: cover;
-      }
+        .background-banner {
+                background-image: linear-gradient(45deg,
+                        rgb(51 43 43 / 75%),
+                        rgb(20 19 20 / 61%)), url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/webjong/images/music_festival.jpg");
+                max-height: 100%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
 
-      .rounded-bg {
+        .nav-item {
+            background-color: #fd6f00;
+            margin-left: 40px;
+            margin-right: 40px;
             border-radius: 15px;
         }
 
-      .introduce-text {
-          color: white;
-          font-weight: 300;
-      }
+        .bg-custom {
+            border: 1px solid #fd6f00;
+            background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg");
+            background-position: center;
+            background-size: cover;
+        }
 
-      .book {
-        background-color: #fd6f00;
+        .rounded-bg {
+                border-radius: 15px;
+            }
 
-        margin: 5px, auto, 5px, auto;
-      }
-
-      .book > .mb-3 {
-        background-color: #fd6f00;
-      }
-      .mb-3 > .form-control {
-        background-color: white;
-      }
-      .form-label{
-        font-weight: bold;
-        color: #1e1e1e;
-      }
-      .submit {
-        background-color: #1e1e1e;
-        font-weight: bold;
-        color: #fd6f00;
-        margin-top: 10px;
-        margin-right: 50px;
-        float: right;
-      }
-      .submit:hover{
-        background-color: white;
-        color: #1e1e1e;
-      }
-
-      .book_List {
-        background-color: #fd6f00;
-        padding-top: 50px;
-      }
-
-      .list-group-item {
-        width: 1000px;
-        margin-bottom: 10px;
-        margin-left: 145px;
-        color: #fd6f00;
-      }
-
-      .team-info-col-heighit {
-            height: auto;
-            font-weight: bold;
-      }
-
-      .footer-box {
-          background-color: #1e1e1e;
-          height: 50px;
-      }
-
-      .footerline {
-            background-color: #fd6f00;
-            border-radius: 25px;
+        .introduce-text {
             color: white;
             font-weight: bold;
-            height: 15px;
-      }
+        }
+        .mx-auto {
+            max-width: 200%;
+            max-height: 200%;
+        }
 
-      .chr {
-          border: none;
-          height: 10px;
-          background-color: #fd6f00;
-          border-radius: 25px;
-          margin: 20px 0;
-      }
+        .book {
+            background-color: #fd6f00;
 
-      .intro {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 200px 0;
-      }
+            margin: 5px, auto, 5px, auto;
+        }
 
-      .pointer:hover {
-          cursor: pointer;
-      }
+        .book > .mb-3 {
+            background-color: #fd6f00;
+        }
+        .mb-3 > .form-control {
+            background-color: white;
+        }
+        .form-label{
+            font-weight: bold;
+            color: #1e1e1e;
+        }
+        .submit {
+            background-color: #1e1e1e;
+            font-weight: bold;
+            color: #fd6f00;
+            margin-top: 10px;
+            margin-right: 50px;
+            float: right;
+        }
+        .submit:hover{
+            background-color: white;
+            color: #1e1e1e;
+        }
+
+        .book_List {
+            background-color: #fd6f00;
+            padding-top: 50px;
+        }
+
+        .list-group-item {
+            width: 1000px;
+            margin-bottom: 10px;
+            margin-left: 145px;
+            color: #fd6f00;
+        }
+
+        .team-info-col-heighit {
+                height: auto;
+                font-weight: bold;
+        }
+
+        .footer-box {
+            background-color: #1e1e1e;
+            height: 50px;
+        }
+
+        .footerline {
+                background-color: #fd6f00;
+                border-radius: 25px;
+                color: white;
+                font-weight: bold;
+                height: 15px;
+        }
+
+        .chr {
+            border: none;
+            height: 10px;
+            background-color: #fd6f00;
+            border-radius: 25px;
+            margin: 20px 0;
+        }
+
+        .intro {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 200px 0;
+        }
+
+        .pointer:hover {
+            cursor: pointer;
+        }
+
+
+      #member-list .card img {
+          max-width: 200px;
+          max-height: 200px;
+      }}
+
+        /* Mobile - Landscape */
+        @media (max-width: 767px) {body {
+            max-height: 90%;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .background-banner {
+                background-image: linear-gradient(45deg,
+                        rgb(51 43 43 / 75%),
+                        rgb(20 19 20 / 61%)), url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/webjong/images/music_festival.jpg");
+                max-height: 100%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+        .nav-item {
+            background-color: #fd6f00;
+            margin-left: 40px;
+            margin-right: 40px;
+            border-radius: 15px;
+        }
+
+        .bg-custom {
+            border: 1px solid #fd6f00;
+            background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .rounded-bg {
+                border-radius: 15px;
+            }
+
+        .introduce-text {
+            color: white;
+            font-weight: bold;
+        }
+        .mx-auto {
+            max-width: 200%;
+            max-height: 200%;
+        }
+
+        .book {
+            background-color: #fd6f00;
+
+            margin: 5px, auto, 5px, auto;
+        }
+
+        .book > .mb-3 {
+            background-color: #fd6f00;
+        }
+        .mb-3 > .form-control {
+            background-color: white;
+        }
+        .form-label{
+            font-weight: bold;
+            color: #1e1e1e;
+        }
+        .submit {
+            background-color: #1e1e1e;
+            font-weight: bold;
+            color: #fd6f00;
+            margin-top: 10px;
+            margin-right: 50px;
+            float: right;
+        }
+        .submit:hover{
+            background-color: white;
+            color: #1e1e1e;
+        }
+
+        .book_List {
+            background-color: #fd6f00;
+            padding-top: 50px;
+        }
+
+        .list-group-item {
+            width: 1000px;
+            margin-bottom: 10px;
+            margin-left: 145px;
+            color: #fd6f00;
+        }
+
+        .team-info-col-heighit {
+                height: auto;
+                font-weight: bold;
+        }
+
+        .footer-box {
+            background-color: #1e1e1e;
+            height: 50px;
+        }
+
+        .footerline {
+                background-color: #fd6f00;
+                border-radius: 25px;
+                color: white;
+                font-weight: bold;
+                height: 15px;
+        }
+
+        .chr {
+            border: none;
+            height: 10px;
+            background-color: #fd6f00;
+            border-radius: 25px;
+            margin: 20px 0;
+        }
+
+        .intro {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 200px 0;
+        }
+
+        .pointer:hover {
+            cursor: pointer;
+        }
+
+
+      #member-list .card img {
+          max-width: 200px;
+          max-height: 200px;
+      }}
+
+        /* Tablet */
+        @media (max-width: 991px) {body {
+            max-height: 90%;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .background-banner {
+                background-image: linear-gradient(45deg,
+                        rgb(51 43 43 / 75%),
+                        rgb(20 19 20 / 61%)), url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/webjong/images/music_festival.jpg");
+                max-height: 100%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+        .nav-item {
+            background-color: #fd6f00;
+            margin-left: 40px;
+            margin-right: 40px;
+            border-radius: 15px;
+        }
+
+        .bg-custom {
+            border: 1px solid #fd6f00;
+            background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .rounded-bg {
+                border-radius: 15px;
+            }
+
+        .introduce-text {
+            color: white;
+            font-weight: bold;
+        }
+        .mx-auto {
+            max-width: 200%;
+            max-height: 200%;
+        }
+
+        .book {
+            background-color: #fd6f00;
+
+            margin: 5px, auto, 5px, auto;
+        }
+
+        .book > .mb-3 {
+            background-color: #fd6f00;
+        }
+        .mb-3 > .form-control {
+            background-color: white;
+        }
+        .form-label{
+            font-weight: bold;
+            color: #1e1e1e;
+        }
+        .submit {
+            background-color: #1e1e1e;
+            font-weight: bold;
+            color: #fd6f00;
+            margin-top: 10px;
+            margin-right: 50px;
+            float: right;
+        }
+        .submit:hover{
+            background-color: white;
+            color: #1e1e1e;
+        }
+
+        .book_List {
+            background-color: #fd6f00;
+            padding-top: 50px;
+        }
+
+        .list-group-item {
+            width: 1000px;
+            margin-bottom: 10px;
+            margin-left: 145px;
+            color: #fd6f00;
+        }
+
+        .team-info-col-heighit {
+                height: auto;
+                font-weight: bold;
+        }
+
+        .footer-box {
+            background-color: #1e1e1e;
+            height: 50px;
+        }
+
+        .footerline {
+                background-color: #fd6f00;
+                border-radius: 25px;
+                color: white;
+                font-weight: bold;
+                height: 15px;
+        }
+
+        .chr {
+            border: none;
+            height: 10px;
+            background-color: #fd6f00;
+            border-radius: 25px;
+            margin: 20px 0;
+        }
+
+        .intro {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 200px 0;
+        }
+
+        .pointer:hover {
+            cursor: pointer;
+        }
+
+
+      #member-list .card img {
+          max-width: 200px;
+          max-height: 200px;
+      }}
+
+        /* Desktop */
+        @media (max-width: 1920px) {body {
+            max-height: 90%;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .background-banner {
+                background-image: linear-gradient(45deg,
+                        rgb(51 43 43 / 75%),
+                        rgb(20 19 20 / 61%)), url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/webjong/images/music_festival.jpg");
+                max-height: 100%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+        .nav-item {
+            background-color: #fd6f00;
+            margin-left: 40px;
+            margin-right: 40px;
+            border-radius: 15px;
+        }
+
+        .bg-custom {
+            border: 1px solid #fd6f00;
+            background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .rounded-bg {
+                border-radius: 15px;
+            }
+
+        .introduce-text {
+            color: white;
+            font-weight: bold;
+        }
+        .mx-auto {
+            max-width: 200%;
+            max-height: 200%;
+        }
+
+        .book {
+            background-color: #fd6f00;
+
+            margin: 5px, auto, 5px, auto;
+        }
+
+        .book > .mb-3 {
+            background-color: #fd6f00;
+        }
+        .mb-3 > .form-control {
+            background-color: white;
+        }
+        .form-label{
+            font-weight: bold;
+            color: #1e1e1e;
+        }
+        .submit {
+            background-color: #1e1e1e;
+            font-weight: bold;
+            color: #fd6f00;
+            margin-top: 10px;
+            margin-right: 50px;
+            float: right;
+        }
+        .submit:hover{
+            background-color: white;
+            color: #1e1e1e;
+        }
+
+        .book_List {
+            background-color: #fd6f00;
+            padding-top: 50px;
+        }
+
+        .list-group-item {
+            width: 1000px;
+            margin-bottom: 10px;
+            margin-left: 145px;
+            color: #fd6f00;
+        }
+
+        .team-info-col-heighit {
+                height: auto;
+                font-weight: bold;
+        }
+
+        .footer-box {
+            background-color: #1e1e1e;
+            height: 50px;
+        }
+
+        .footerline {
+                background-color: #fd6f00;
+                border-radius: 25px;
+                color: white;
+                font-weight: bold;
+                height: 15px;
+        }
+
+        .chr {
+            border: none;
+            height: 10px;
+            background-color: #fd6f00;
+            border-radius: 25px;
+            margin: 20px 0;
+        }
+
+        .intro {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 200px 0;
+        }
+
+        .pointer:hover {
+            cursor: pointer;
+        }
+
+
+      #member-list .card img {
+          max-width: 200px;
+          max-height: 200px;
+      }}
+
+        /* Default CSS */
+
+        body {
+            max-height: 90%;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .background-banner {
+                background-image: linear-gradient(45deg,
+                        rgb(51 43 43 / 75%),
+                        rgb(20 19 20 / 61%)), url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/webjong/images/music_festival.jpg");
+                max-height: 100%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+        .nav-item {
+            background-color: #fd6f00;
+            margin-left: 40px;
+            margin-right: 40px;
+            border-radius: 15px;
+        }
+
+        .bg-custom {
+            border: 1px solid #fd6f00;
+            background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .rounded-bg {
+                border-radius: 15px;
+            }
+
+        .introduce-text {
+            color: white;
+            font-weight: bold;
+        }
+        .mx-auto {
+            max-width: 200%;
+            max-height: 200%;
+        }
+
+        .book {
+            background-color: #fd6f00;
+
+            margin: 5px, auto, 5px, auto;
+        }
+
+        .book > .mb-3 {
+            background-color: #fd6f00;
+        }
+        .mb-3 > .form-control {
+            background-color: white;
+        }
+        .form-label{
+            font-weight: bold;
+            color: #1e1e1e;
+        }
+        .submit {
+            background-color: #1e1e1e;
+            font-weight: bold;
+            color: #fd6f00;
+            margin-top: 10px;
+            margin-right: 50px;
+            float: right;
+        }
+        .submit:hover{
+            background-color: white;
+            color: #1e1e1e;
+        }
+
+        .book_List {
+            background-color: #fd6f00;
+            padding-top: 50px;
+        }
+
+        .list-group-item {
+            width: 1000px;
+            margin-bottom: 10px;
+            margin-left: 145px;
+            color: #fd6f00;
+        }
+
+        .team-info-col-heighit {
+                height: auto;
+                font-weight: bold;
+        }
+
+        .footer-box {
+            background-color: #1e1e1e;
+            height: 50px;
+        }
+
+        .footerline {
+                background-color: #fd6f00;
+                border-radius: 25px;
+                color: white;
+                font-weight: bold;
+                height: 15px;
+        }
+
+        .chr {
+            border: none;
+            height: 10px;
+            background-color: #fd6f00;
+            border-radius: 25px;
+            margin: 20px 0;
+        }
+
+        .intro {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 200px 0;
+        }
+
+        .pointer:hover {
+            cursor: pointer;
+        }
 
 
       #member-list .card img {
@@ -144,293 +681,269 @@
           max-height: 200px;
       }    
     </style>
-  </head>     
-
-  <body data-bs-theme="dark">
-    <nav
-      class="navbar border-bottom border-bottom-dark d-flex justify-content-space-between md-5"
-      data-bs-theme="dark"
-    >
-      <div class="ms-3">
-        <img
-          src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/webjong/images/sparta-logo.svg"
-          alt=""
-        />
-      </div>
-      <nav class="navbar border-bottom border-bottom-dark d-flex justify-content-space-between md-5" data-bs-theme="dark">
-        <div id="top" class="ms-3">
-            <img src="{{ url_for('static', filename='image/logo00.png') }}" alt="" width="100px" height="100px" />
-        </div>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active px-5" aria-current="page" href="{{url_for('home')}}">INTRO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active px-5" aria-current="page" href="#card-list">300조</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active px-5" aria-current="page" href="#memberlink">멤버</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active px-5" aria-current="page" href="#banglink">방명록</a>
-                        </li>
-                    </ul>
+      
+<html>
+    <body data-bs-theme="dark">
+        <nav class="navbar border-bottom border-bottom-dark d-flex justify-content-space-between md-5" data-bs-theme="dark">
+            <div id="top" class="ms-3">
+                <img src="{{ url_for('static', filename='image/logo00.png') }}" alt="" width="100px" height="100px" />
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active px-5" aria-current="page" href="{{url_for('home')}}">INTRO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active px-5" aria-current="page" href="#card-list">300조</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active px-5" aria-current="page" href="#memberlink">멤버</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active px-5" aria-current="page" href="#banglink">방명록</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </nav>
+            <div class="weather">
             </div>
         </nav>
-        <div class="weather">
+        <div class="intro">
+            <img src="{{ url_for('static', filename='image/logo01.png') }}" alt="" data-href="#" width="400px"
+                height="400px">
         </div>
-    </nav>
-    <div class="intro">
-        <img src="{{ url_for('static', filename='image/logo01.png') }}" alt="" data-href="#" width="400px"
-            height="400px">
-    </div>
-    <div class="container-introduce text-center mt-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="px-4 py-5 my-5 text-center g-4 mx-auto pb-5 bg-custom rounded-bg">
-                    <div class="mx-auto">
-                        <h1>About US : </h1>
-                        <h3 class="introduce-text">안녕하세요! 저희는 Team 300 입니다.<br>
-                            스파르타의 정신으로 무장한 저희는 <br>
-                            300대 1의 경쟁력도 이길 자신감과 <br>
-                            300조원의 매출도 만들어 낼 수 있는 <br>
-                            강려크한 매력을 지닌!! <br>
-                            5명으로 똘똘 뭉친 스파르타의 전사들 입니다.
-                        </h3>
-                        <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"/>
-                            width="150px" height="150px">
-                        <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"/>
-                            width="150px" height="150px">
-                        <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"/>
-                            width="150px" height="150px">
-                        <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"/>
-                            width="150px" height="150px">
-                        <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"/>
+        <div class="container-introduce text-center mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="px-4 py-5 my-5 text-center g-4 mx-auto pb-5 bg-custom rounded-bg">
+                        <div class="mx-auto">
+                            <h1>About US : </h1>
+                            <h3 class="introduce-text">안녕하세요! 저희는 Team 300 입니다.<br>
+                                스파르타의 정신으로 무장한 저희는 <br>
+                                300대 1의 경쟁력도 이길 자신감과 <br>
+                                300조원의 매출도 만들어 낼 수 있는 <br>
+                                강려크한 매력을 지닌!! <br>
+                                5명으로 똘똘 뭉친 스파르타의 전사들 입니다.
+                            </h3>
+                            <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"
+                                width="150px" height="150px">
+                            <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"
+                                width="150px" height="150px">
+                            <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"
+                                width="150px" height="150px">
+                            <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"
+                                width="150px" height="150px">
+                            <img src="{{ url_for('static', filename='image/rtan05.png') }}" alt="" data-href="#"
+                                width="150px" height="150px">
+
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="#top" button class="btn btn-Light" type="button">위로가기</button></a>
-    </div>
-    <hr class="chr">
-    <div id="card-list"
-        class="row row-cols-1 row-cols-md-4 g-4 mx-auto w-100 pb-5 justify-content-center team-info-col-heighit">
-        <div class="col">
-            <div class="card team-info-col-heighit">
-                <div class="card-body">
-                    <span style="color: #fd6f00">
-                        <h3 class="card-title">우리팀 TMI / 팀원들에게 한마디</h3>
-                    </span>
-                    <p>
-                        이준승 INTP : 화이팅<br>
-                        이상일 ISFP : 다같이 돈 잘버는 곳으로 취업해요~<br>
-                        권진우 ISFJ : 다들 화이팅 해요 <br>
-                        이규민 ???? : 다 같이 열공 해봐요!<br>
-                        이현기 ISTP : 앞으로 잘부탁드립니다!<br>
-                    </p>
+        <hr class="chr">
+        <div id="card-list"
+            class="row row-cols-1 row-cols-md-4 g-4 mx-auto w-100 pb-5 justify-content-center team-info-col-heighit">
+            <div class="col">
+                <div class="card team-info-col-heighit">
+                    <div class="card-body">
+                        <span style="color: #fd6f00">
+                            <h3 class="card-title">우리팀 TMI / 팀원들에게 한마디</h3>
+                        </span>
+                        <p>
+                            이준승 INTP : 화이팅<br>
+                            이상일 ISFP : 다같이 돈 잘버는 곳으로 취업해요~<br>
+                            권진우 ISFJ : 다들 화이팅 해요 <br>
+                            이규민 ???? : 다 같이 열공 해봐요!<br>
+                            이현기 ISTP : 앞으로 잘부탁드립니다!<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card team-info-col-heighit">
+                    <div class="card-body">
+                        <span style="color: #fd6f00">
+                            <h3 class="card-title">궁극적인 목표</h3>
+                        </span>
+                        <p>우리팀 약속 : 실수나 문제가 있어도 남 탓하지 않고, 자책하지 않고 문제를 해결해나가는데 집중하겠습니다.<br>
+                            개발을 하면서 정리할 내용 또는 학습 한 내용이 있다면 블로그에 정리하기<br>
+                            1. 어떤 의도, 이유로 해당 기능을 구현했는지<br>
+                            → 강의에서 배워서, 필수구현 사항이여서는 지양합시다!<br>
+                            2. 해당 기능은 어떤 로직으로 코드가 작동하는지 <br>
+                            → 입력값이 들어가면 어떤 출력값이 나오는지 또는 어떤 변화가 있는지<br>
+                            3. 버그 또는 에러는 어떤 것이 있었고 어떻게 해결하였는지<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card team-info-col-heighit">
+                    <div class="card-body">
+                        <span style="color: #fd6f00">
+                            <h3 class="card-title">우리팀의 규칙</h3>
+                        </span>
+                        <p>1. 오전에 10분정도 스탠드업 미팅 진행후 일과 적용 (매 09시 20분)<br>
+                            2. 회의는 브레인 스토밍 기법을 활용, 자유로운 발제 및 의견제시 를 지향<br>
+                            3. 저녁 식사 전 Prograss briefing 겸 회의 하기. ( 18시 전후로 진행)<br>
+                            4. 식사시간<br>
+                            점심시간: 12시 30분 ~ 1시 30분 / 저녁시간 : 18시 30분 ~ 19시 30분<br>
+                            5. 먼저 마무리 될 경우 다른쪽 서포트해주기<br>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card team-info-col-heighit">
-                <div class="card-body">
-                    <span style="color: #fd6f00">
-                        <h3 class="card-title">궁극적인 목표</h3>
-                    </span>
-                    <p>우리팀 약속 : 실수나 문제가 있어도 남 탓하지 않고, 자책하지 않고 문제를 해결해나가는데 집중하겠습니다.<br>
-                        개발을 하면서 정리할 내용 또는 학습 한 내용이 있다면 블로그에 정리하기<br>
-                        1. 어떤 의도, 이유로 해당 기능을 구현했는지<br>
-                        → 강의에서 배워서, 필수구현 사항이여서는 지양합시다!<br>
-                        2. 해당 기능은 어떤 로직으로 코드가 작동하는지 <br>
-                        → 입력값이 들어가면 어떤 출력값이 나오는지 또는 어떤 변화가 있는지<br>
-                        3. 버그 또는 에러는 어떤 것이 있었고 어떻게 해결하였는지<br>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card team-info-col-heighit">
-                <div class="card-body">
-                    <span style="color: #fd6f00">
-                        <h3 class="card-title">우리팀의 규칙</h3>
-                    </span>
-                    <p>1. 오전에 10분정도 스탠드업 미팅 진행후 일과 적용 (매 09시 20분)<br>
-                        2. 회의는 브레인 스토밍 기법을 활용, 자유로운 발제 및 의견제시 를 지향<br>
-                        3. 저녁 식사 전 Prograss briefing 겸 회의 하기. ( 18시 전후로 진행)<br>
-                        4. 식사시간<br>
-                        점심시간: 12시 30분 ~ 1시 30분 / 저녁시간 : 18시 30분 ~ 19시 30분<br>
-                        5. 먼저 마무리 될 경우 다른쪽 서포트해주기<br>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="#top" button class="btn btn-Light" type="button">위로가기</button></a>
-    </div>
-    <hr class="chr">
-    <div class="container-member text-center mt-5">
+        <div class="container-member text-center mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-3">
-                <div class="text-center pb-1 py-3 px-4 my-3 bg-custom rounded-bg">
-                    <div class="mx-auto">
-                        <h2 id="memberlink" class="introduce-text">멤버 소개</h2>
+            <div class="text-center pb-1 py-3 px-4 my-3 bg-custom rounded-bg">
+                <div class="mx-auto">
+                <p class="introduce-text">멤버 소개</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="container mr-2 ml-2">
+            <div id="member-list"
+                class="row row-cols-1 row-cols-md-5 g-4 mx-auto pb-5 justify-content-center margin-right 100">
+                <div class="col">
+                    <div class="card border-0">
+                        <img id="member0" class="rtan pointer" src="{{ url_for('static', filename='image/rtan00.jpg') }}"
+                            alt="" data-href="{{url_for('members1')}}">
+                        <div class="card-body">
+                        </div>
                     </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img id="member1" class="rtan pointer" src="{{ url_for('static', filename='image/rtan01.jpg') }}"
+                            alt="" data-href="#">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img id="member2" class="rtan pointer" src="{{ url_for('static', filename='image/rtan02.png') }}"
+                            alt="" data-href="#">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img id="member3" class="rtan pointer" src="{{ url_for('static', filename='image/rtan03.png') }}"
+                            alt="" data-href="#">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img id="member4" class="rtan pointer" src="{{ url_for('static', filename='image/rtan04.png') }}"
+                            alt="" data-href="#">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="#top" button class="btn btn-Light" type="button">위로가기</button></a>
+        </div>
+        <hr class="chr">
+        <!--방명록 관련 코드가 올 예정-->
+        <div class="container">
+            <div class="row mt-4">
+                <form class="book" action="{{url_for('createbooks')}}" method="post">
+                    <div class="col">
+                        <p class="form-label">방명록</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                        >이름</label
+                        >
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="username"
+                        placeholder="이름을 입력하세요."
+                        name="username"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label"
+                        >남기실 말씀</label
+                        >
+                        <textarea
+                        class="form-control"
+                        id="message"
+                        rows="3"
+                        placeholder="남기실 말씀을 적어주세요."
+                        name="msg">
+                        </textarea>
+                        <button type="submit" class="submit" onclick="get_Data()">확인</button>
+                    </div>
+                </form>
+            <div class="book_List" id="list">
+                {% for book in books %}
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item">{{book.name}}: {{book.message}}</li>
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="container">
+            <div class="row">
+                <div class="footerline">
+                    <footer>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between py-4">
+                            <p>© Sparta Company, designed by <span style="color: #fd6f00"> Team 300 </span>2024-02 Inc. All
+                                rights reserved.</p>
+                            <ul class="list-unstyled d-flex">
+                                <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-youtube"></i></a>
+                                </li>
+                                <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-instagram"></i></a>
+                                </li>
+                                <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-postcard"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container mr-2 ml-2">
-        <div id="member-list"
-            class="row row-cols-1 row-cols-md-5 g-4 mx-auto pb-5 justify-content-center margin-right 100">
-            <div class="col">
-                <div class="card border-0">
-                    <img id="member0" class="rtan pointer" src="{{ url_for('static', filename='image/rtan00.jpg') }}"
-                        alt="" data-href="#">
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border-0">
-                    <img id="member1" class="rtan pointer" src="{{ url_for('static', filename='image/rtan01.jpg') }}"
-                        alt="" data-href="#">
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border-0">
-                    <img id="member2" class="rtan pointer" src="{{ url_for('static', filename='image/rtan02.png') }}"
-                        alt="" data-href="#">
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border-0">
-                    <img id="member3" class="rtan pointer" src="{{ url_for('static', filename='image/rtan03.png') }}"
-                        alt="" data-href="#">
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border-0">
-                    <img id="member4" class="rtan pointer" src="{{ url_for('static', filename='image/rtan04.png') }}"
-                        alt="" data-href="#">
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <a href="#top" button class="btn btn-Light" type="button">위로가기</button></a>
-    </div>
-    <hr class="chr">
-    <!--방명록 관련 코드가 올 예정-->
-    <div class="container">
-      <div class="row mt-4">
-        <form class="book" action="{{url_for('createbooks')}}" method="post">
-          <div class="col">
-            <p class="form-label">방명록</p>
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >이름</label
-            >
-            <input
-              type="text"
-              class="form-control"
-              id="username"
-              placeholder="이름을 입력하세요."
-              name="username"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >남기실 말씀</label
-            >
-            <textarea
-              class="form-control"
-              id="message"
-              rows="3"
-              placeholder="남기실 말씀을 적어주세요."
-              name="msg">
-            </textarea>
-            <button type="submit" class="submit" onclick="get_Data()">확인</button>
-          </div>
-        </form>
-         <div class="book_List" id="list">
-            {% for book in books %}
-            <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">{{book.name}}: {{book.message}}</li>
-            </ul>
-            {% endfor %}
-         </div><!-- footer -->
-         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <a href="#top" button class="btn btn-Light" type="button">위로가기</button></a>
-      </div>
-      <hr class="chr">
-      <!-- footer -->
-      <div class="container">
-          <div class="row">
-              <div class="footerline">
-                  <footer>
-                      <div class="d-flex flex-column flex-sm-row justify-content-between py-4">
-                          <p>© Sparta Company, designed by <span style="color: #fd6f00"> Team 300 </span>2024-02 Inc. All
-                              rights reserved.</p>
-                          <ul class="list-unstyled d-flex">
-                              <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-youtube"></i></a>
-                              </li>
-                              <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-instagram"></i></a>
-                              </li>
-                              <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-postcard"></i></a>
-                              </li>
-                          </ul>
-                      </div>
-                  </footer>
-              </div>
-          </div>
-      </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-    </script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+                crossorigin="anonymous"
+            ></script>
+            <script>
         // 멤버 이미지 클릭시 멤버 소개 페이지로 이동하는 함수
-        document.addEventListener('DOMContentLoaded', function () {
-            var images = document.querySelectorAll('.rtan');
-            images.forEach(function (image) {
-                image.addEventListener('click', function () {
-                    var href = image.getAttribute('data-href');
-                    if (href) {
-                        window.location.href = href;
-                    }
-                });
+        document.addEventListener("DOMContentLoaded", function () {
+        var images = document.querySelectorAll(".rtan");
+        images.forEach(function (image) {
+            image.addEventListener("click", function () {
+            var href = image.getAttribute("data-href");
+            if (href) {
+                window.location.href = href;
+            }
             });
         });
-
-    </script>
-  </body>
+        });
+        
+            </script>
+        </div>
+    </body>
 </html>

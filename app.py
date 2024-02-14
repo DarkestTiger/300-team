@@ -43,6 +43,10 @@ def createbooks():
         
     return render_template('index.html', books=books)
 
+@app.route('/members/1')
+def members1():
+     return render_template('profle.html')
+
 
 
 if __name__ == '__main__':
