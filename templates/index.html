@@ -7,8 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>300-team 소개</title>
     <style>
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
@@ -26,10 +25,8 @@
 
         .nav-item {
             background-color: #fd6f00;
-            margin-left: 50px;
-            margin-right: 50px;
-            padding-left: 40px;
-            padding-right: 40px;
+            margin-left: 40px;
+            margin-right: 40px;
             border-radius: 15px;
         }
 
@@ -82,6 +79,11 @@
             margin: 200px 0;
         }
 
+        .pointer:hover {
+            cursor: pointer;
+        }
+
+
         /* #member-list .card img {
             max-width: 200px;
             max-height: 200px;
@@ -93,7 +95,7 @@
 
     <nav class="navbar border-bottom border-bottom-dark d-flex justify-content-space-between md-5" data-bs-theme="dark">
         <div id="top" class="ms-3">
-            <img src="{{ url_for('static', filename='image/logo00.png') }}" alt="" width="100px" height="100px"/>
+            <img src="{{ url_for('static', filename='image/logo00.png') }}" alt="" width="100px" height="100px" />
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -104,16 +106,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">INTRO</a>
+                            <a class="nav-link active px-5" aria-current="page" href="{{url_for('home')}}">INTRO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#card-list">300조</a>
+                            <a class="nav-link active px-5" aria-current="page" href="#card-list">300조</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#memberlink">멤버</a>
+                            <a class="nav-link active px-5" aria-current="page" href="#memberlink">멤버</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#banglink">방명록</a>
+                            <a class="nav-link active px-5" aria-current="page" href="#banglink">방명록</a>
                         </li>
                     </ul>
                 </div>
@@ -232,40 +234,40 @@
             class="row row-cols-1 row-cols-md-5 g-4 mx-auto pb-5 justify-content-center margin-right 100">
             <div class="col">
                 <div class="card border-0">
-                    <img id="member0" class="rtan" src="{{ url_for('static', filename='image/rtan00.jpg') }}" alt=""
-                        data-href="#">
+                    <img id="member0" class="rtan pointer" src="{{ url_for('static', filename='image/rtan00.jpg') }}"
+                        alt="" data-href="#">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card border-0">
-                    <img id="member1" class="rtan" src="{{ url_for('static', filename='image/rtan01.jpg') }}" alt=""
-                        data-href="#">
+                    <img id="member1" class="rtan pointer" src="{{ url_for('static', filename='image/rtan01.jpg') }}"
+                        alt="" data-href="#">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card border-0">
-                    <img id="member2" class="rtan" src="{{ url_for('static', filename='image/rtan02.png') }}" alt=""
-                        data-href="#">
+                    <img id="member2" class="rtan pointer" src="{{ url_for('static', filename='image/rtan02.png') }}"
+                        alt="" data-href="#">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card border-0">
-                    <img id="member3" class="rtan" src="{{ url_for('static', filename='image/rtan03.png') }}" alt=""
-                        data-href="#">
+                    <img id="member3" class="rtan pointer" src="{{ url_for('static', filename='image/rtan03.png') }}"
+                        alt="" data-href="#">
                     <div class="card-body">
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card border-0">
-                    <img id="member4" class="rtan" src="{{ url_for('static', filename='image/rtan04.png') }}" alt=""
-                        data-href="#">
+                    <img id="member4" class="rtan pointer" src="{{ url_for('static', filename='image/rtan04.png') }}"
+                        alt="" data-href="#">
                     <div class="card-body">
                     </div>
                 </div>
