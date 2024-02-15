@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>300 우리 팀 소개</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            width: 1920px;
+            height: 1080px;
+        }
+
+        .wrap {
+            width: 1000px;
+            height: 800px;
+            justify-content: center;
+            position: relative;
+            left: 15%;
+            top: 15%;
+        }
+
+        .container {
+            display: flex;
+            margin-left: 30%;
+        }
+
+        .box_1 {
+            width: 20%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: 10px, 5px, auto, 20px;
+
+            color: #fd6f00;
+        }
+
+        .box_1 img {
+            margin-right: 30px;
+        }
+
+        .box_1 h2 {
+            width: 200px;
+            text-align: center;
+            margin: 15px;
+        }
+
+        .box_2 {
+            box-sizing: border-box;
+            text-align: right;
+            text-align: left;
+            margin-left: 150px;
+            margin-top: 15px;
+
+            color: #fd6f00;
+        }
+
+        .box_2 h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .box_2 h2 {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-right: 100px;
+        }
+
+        /* // co2 // */
+
+        .container2 {
+            text-align: left;
+            background-color: #fd6f00;
+            padding: 45px, 5px, 5px, 45px, auto;
+            border-radius: 80px;
+            width: 800px;
+            height: 450px;
+            margin-left: 100px;
+            justify-content: center;
+            box-shadow: 7px 7px 10px#ffffff;
+            border: 1px solid #ffffff;
+            margin-left: 20%;
+            margin-bottom: 2%;
+        }
+
+        .container2 h1 {
+            color: #1e1e1e;
+            font-size: 40px;
+            margin-bottom: 10px;
+            margin-left: 40px;
+        }
+
+        .container2 h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            margin-left: 20px;
+        }
+
+        .container2 h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+            margin-left: 40px;
+        }
+
+        .btn {
+            position: relative;
+            left: 1100px;
+            top: 60px;
+
+            height: 40px;
+            width: 80px;
+
+            color: #1e1e1e;
+            background-color: #fd6f00;
+            font-size: 30px;
+            padding: 40px, 80px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 5px#ffffff;
+            border: 1px solid #ffffff;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: grey;
+            color: #1e1e1e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="box_1">
+                <div>
+                    <img src="{{data.img_url}}" style="
+                width: 190px;
+                display: block;
+                border-radius: 80px;
+                box-shadow: 7px 7px 10px#ffffff;
+                border: 1px solid #ffffff;" alt="" />
+                </div>
+                <div>
+                    <a href="{{data.blog_url}}">
+                        <span style="color: #fd6f00;">
+                            <h2>블로그 주소</h2>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box_2">
+                <h1>{{data.name}}</h1>
+                <h2>{{data.introduce|safe}}</h2>
+            </div>
+        </div>
+        <div class="container2">
+            <h1>Profile</h1>
+            <h2>-사용할 수 있는 언어</h2>
+            <h3>{{ data.programming_languages }}</h3>
+            <h2>-자신의 장점</h2>
+            <h3>{{data.strength}}</h3>
+            <h2>-나의 mbti</h2>
+            <h3>{{data.mbti}}</h3>
+            <h2>-tmi</h2>
+            <h3>{{data.tmi}}</h3>
+        </div>
+        <button id="backButton" class="btn">
+            뒤로
+        </button>
+        <script>
+            console.log('test')
+            document.getElementById('backButton').addEventListener('click', function () {
+                console.log('test')
+                window.location.href = '/';
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>
