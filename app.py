@@ -94,14 +94,14 @@ member_datas = {
         'tmi': '머리털은 취업하고 자를 예정입니다...'
     },
     5: {
-        'img_url': '',
-        'blog_url': '',
+        'img_url': '../static/image/권진우.png',
+        'blog_url': 'https://blog.naver.com/rkdvo10',
         'name': '권진우',
-        'introduce': '',
-        'programming_languages': ['', ''],
-        'strength': '',
-        'mbti': '',
-        'tmi': ''
+        'introduce': '안녕하세요 저는 권진우입니다. 나의 꿈은 팀원들이 저를 믿을 수 있는 개발자가 되고 싶습니다.',
+        'programming_languages': ['HTML', 'CSS', 'Python', 'JS'],
+        'strength': '사람들을 재밌게 해줍니다.',
+        'mbti': 'ISFJ',
+        'tmi': '다들 화이팅!'
     },
 }
 
