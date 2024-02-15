@@ -113,27 +113,29 @@
           />
         </div>
         <div>
-          <h2>www.몽글.co.kr</h2>
+          <h2>{{data.blog_url}}</h2>
         </div>
       </div>
 
       <div class="box_2">
-        <h1>몽글</h1>
-        <p>안녕하세요 300팀 팀원 이에요</p>
-        <p>잘 부탁 드리겠습니다.</p>
+        <h1>{{data.name}}</h1>
+        <p>{{data.introduce|safe}}</p>
+        <!-- <p>잘 부탁 드리겠습니다.</p> -->
       </div>
     </div>
 
     <div class="container2">
       <h1>Profile</h1>
       <h2>-사용할 수 있는 언어</h2>
-      <p>css</p>
+      {% for language in data.programming_languages %}
+      <p>{{ language }}</p>
+      {% endfor %}
       <h2>-자신의 장점</h2>
-      <p>안농</p>
+      <p>{{data.strength}}</p>
       <h2>-나의 mbti</h2>
-      <p>안농</p>
+      <p>{{data.mbti}}</p>
       <h2>-tmi</h2>
-      <p>안농</p>
+      <p>{{data.tmi}}</p>
     </div>
 
     <div class="footer">
