@@ -7,7 +7,8 @@
     <title>팀 소개 메인페이지</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
     <style>
@@ -365,7 +366,7 @@
     <!--방명록 관련 코드-->
     <div id="banglink" class="container">
         <div class="row mt-4">
-            <form class="book" action="{{url_for('createbooks')}}" method="post">
+            <form id="book-form" class="book">
                 <div class="col">
                     <p class="form-label">방명록</p>
                 </div>
@@ -375,17 +376,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">남기실 말씀</label>
-                    <textarea class="form-control" id="message" rows="3" placeholder="남기실 말씀을 적어주세요." name="msg">
-                        </textarea>
-                    <button type="submit" class="submit" onclick="get_Data()">확인</button>
+                    <textarea class="form-control" id="message" rows="3" placeholder="남기실 말씀을 적어주세요."
+                        name="msg"></textarea>
+                    <button id="btnBookOk" type="submit" class="submit">확인</button>
                 </div>
             </form>
-            <div class="book_List" id="list">
-                {% for book in books %}
-                <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item">{{book.name}}: {{book.message}}</li>
-                </ul>
-                {% endfor %}
+            <div class="book_List" id="book-list">
             </div>
         </div>
         <!-- footer -->
@@ -430,6 +426,62 @@
                     });
                 });
             });
+
+            function refreshUserList() {
+                fetch('/get_books')
+                    .then(response => response.json())
+                    .then(data => {
+                        inputUserName = document.getElementById('username');
+                        inputMessage = document.getElementById('message');
+
+                        if (inputUserName) {
+                            inputUserName.value = ''
+                        }
+                        if (inputMessage) {
+                            inputMessage.value = ''
+                        }
+
+                        const bookList = document.getElementById('book-list');
+                        bookList.innerHTML = ''
+                        data.forEach(book => {
+                            text = `${book.name}: ${book.message}`;
+
+                            const ul = document.createElement('ul')
+                            ul.classList.add('list-group')
+                            ul.classList.add('list-group-horizontal')
+
+                            
+                            const li = document.createElement('li');
+                            li.classList.add("list-group-item")
+                            li.textContent = text
+                            ul.appendChild(li)
+                            bookList.appendChild(ul);
+                        });
+                    });
+            }
+
+            // 페이지 로드 시 데이터베이스에 저장된 내용을 화면에 표시
+            refreshUserList();
+
+            document.getElementById('book-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const formData = new FormData(event.target);
+                fetch('/Books/create', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        refreshUserList();
+                    });
+            });
+
+            document.getElementById('message').addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    document.getElementById('btnBookOk').click();
+                }
+            });
+
 
         </script>
     </div>

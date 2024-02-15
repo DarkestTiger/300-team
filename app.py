@@ -2,7 +2,7 @@ import os
 import sys
 import flask
 import copy
-from flask import Flask, render_template, request, url_for, Response
+from flask import Flask, render_template, request, url_for, Response, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -11,14 +11,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
     os.path.join(basedir, 'database.db')
 db = SQLAlchemy(app)
-
-
-@app.route('/', methods=['Get'])
-def home():
-
-    books = BookMsg.query.order_by('id').all()
-    print(books)
-    return render_template('index.html', books=books)
 
 
 class BookMsg(db.Model):
@@ -33,8 +25,20 @@ class BookMsg(db.Model):
 with app.app_context():
     db.create_all()
 
+@app.route('/', methods=['Get'])
+def home():
+    books = BookMsg.query.order_by('id').all()
+    # print(books)
+    print(f'home called')
+    return render_template('index.html', data=books)
 
-@app.route('/Books/create/', methods=['Post'])
+
+@app.route('/get_books')
+def get_books():
+    books = BookMsg.query.all()
+    return jsonify([{'id': book.id, 'name': book.name, 'message': book.message} for book in books])
+
+@app.route('/Books/create/', methods=['POST'])
 def createbooks():
     # form에서 가져온 데이터 받아오기
     username_recieve = request.form.get('username')
@@ -47,9 +51,10 @@ def createbooks():
     db.session.add(book)
     db.session.commit()
 
-    books = BookMsg.query.order_by('id').all()
+    # books = BookMsg.query.order_by('id').all()
+    return jsonify({'id': book.id, 'name': book.name, 'message': book.message})
 
-    return render_template('index.html', books=books)
+    # return render_template('index.html', data=books)
 
 
 member_datas = {
