@@ -18,6 +18,8 @@
 
         body {
             max-height: 90%;
+            line-height: 2;
+            text-align: center;
         }
 
         p {
@@ -41,6 +43,8 @@
             margin-left: 40px;
             margin-right: 40px;
             border-radius: 15px;
+            border: 2px solid white;
+            font-weight: bold;
         }
 
         .bg-custom {
@@ -100,7 +104,8 @@
 
         .book_List {
             background-color: #fd6f00;
-            padding-top: 50px;
+            padding-top: 3%;
+            padding-bottom: 3%;
         }
 
         .list-group-item {
@@ -117,7 +122,7 @@
 
         .footer-box {
             background-color: #1e1e1e;
-            height: 50px;
+            height: 5%;
         }
 
         .footerline {
@@ -141,7 +146,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 200px 0;
+            margin: 5% 0;
+        }
+
+        .introment {
+            text-align: center;
         }
 
         .pointer:hover {
@@ -150,10 +159,13 @@
 
 
         #member-list .card img {
-            margin-top: 20%;
-            max-width: 200px;
-            max-height: 200px;
+            margin-top: 30%;
+            margin-bottom: 30%;
+            max-width: 100%;
+            max-height: 110%;
         }
+
+
     </style>
 
     <html>
@@ -175,13 +187,13 @@
                             <a class="nav-link active px-5" aria-current="page" href="{{url_for('home')}}">INTRO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active px-5" aria-current="page" href="#card-list">300조</a>
+                            <a class="nav-link active px-5" aria-current="page" href="#card-list">300</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active px-5" aria-current="page" href="#memberlink">멤버</a>
+                            <a class="nav-link active px-5" aria-current="page" href="#memberlink">Member</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active px-5" aria-current="page" href="#banglink">방명록</a>
+                            <a class="nav-link active px-5" aria-current="page" href="#banglink">Foot printing</a>
                         </li>
                     </ul>
                 </div>
@@ -194,6 +206,17 @@
         <img src="{{ url_for('static', filename='image/logo01.png') }}" alt="" data-href="#" width="400px"
             height="400px">
     </div>
+    <div class=" introment">
+        <p>Welcome to Team 300's introduction page.<br>
+            Team 300 collaborates on communication and respect, and strives to ensure that all users can operate in a pleasant environment.<br>
+            Team 300 values courtesy and manners among its users. Respecting and being considerate of other users is one of the core values of our team.<br>
+            Therefore, all users expect to follow our own guidelines. <br>
+            If a user offends or behaves rudely to other users, appropriate action may be taken under Team Leader 준승's judgment.<br>
+            Our team aims to develop together by respecting and cooperating with each other.<br>
+            If you have visited this page, you may be interested in the values and activities of Team 300.<br>
+            If you have any questions or need additional information, please feel free to contact us. We hope you have a fun and informative time together.</p>
+        </div>
+        <hr class="chr">
     <div class="container-introduce text-center mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -228,7 +251,7 @@
         <div class="col">
             <div class="card team-info-col-heighit">
                 <div class="card-body">
-                    <span style="color: #fd6f00">
+                    <span style="font-size: 2em; color: #fd6f00">
                         <h3 class="card-title">우리팀 TMI / 팀원들에게 한마디</h3>
                     </span>
                     <p>
@@ -244,7 +267,7 @@
         <div class="col">
             <div class="card team-info-col-heighit">
                 <div class="card-body">
-                    <span style="color: #fd6f00">
+                    <span style="font-size: 2em; color: #fd6f00">
                         <h3 class="card-title">궁극적인 목표</h3>
                     </span>
                     <p>우리팀 약속 : 실수나 문제가 있어도 남 탓하지 않고, 자책하지 않고 문제를 해결해나가는데 집중하겠습니다.<br>
@@ -261,7 +284,7 @@
         <div class="col">
             <div class="card team-info-col-heighit">
                 <div class="card-body">
-                    <span style="color: #fd6f00">
+                    <span style="font-size: 2em; color: #fd6f00">
                         <h3 class="card-title">우리팀의 규칙</h3>
                     </span>
                     <p>1. 오전에 10분정도 스탠드업 미팅 진행후 일과 적용 (매 09시 20분)<br>
@@ -290,6 +313,7 @@
             </div>
         </div>
     </div>
+    <p>**클릭시 상세페이지로 이동합니다.**</p>
     <div class="container mr-2 ml-2">
         <div id="member-list"
             class="row row-cols-1 row-cols-md-5 g-4 mx-auto pb-5 justify-content-center margin-right 100">
