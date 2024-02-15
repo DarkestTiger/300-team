@@ -101,7 +101,18 @@
       <div class="box_1">
         <div>
           <img
-            src="https://postfiles.pstatic.net/MjAyNDAyMTNfMjMw/MDAxNzA3ODM0NzM4MjMw.kfnCGX8FQkW06KcpvKjCEJE4vbpMssC4Y1dWEFdGACwg.dfuAR6Vxp9nzC_ulQbcT90EOHFZLr5-uzrriA_qBRWIg.JPEG.rkdvo10/KakaoTalk_20240206_134827228.jpg?type=w966"
+            src="{{ url_for('static', filename='data.img_url') }}"
+            style="
+              width: 190px;
+              display: block;
+              border-radius: 80px;
+              box-shadow: 7px 7px 10px#ffffff;
+              border: 1px solid #ffffff;
+            "
+            alt=""
+          />
+          <img
+            src="{{ url_for('static', filename='image/rtan00.jpg') }}"
             style="
               width: 190px;
               display: block;
@@ -113,6 +124,7 @@
           />
         </div>
         <div>
+          <h2>{{data.img_url}}</h2>
           <h2>{{data.blog_url}}</h2>
         </div>
       </div>
@@ -139,7 +151,12 @@
     </div>
 
     <div class="footer">
-      <button class="btn">뒤로 가기</button>
+      <button id="backBtn" class="btn">뒤로 가기</button>
     </div>
+    <script>
+      document.getElementById('backButton').addEventListener('click', function() {
+        window.location.href = 'index.html';
+      });
+    </script>
   </body>
 </html>
