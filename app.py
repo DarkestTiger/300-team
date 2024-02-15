@@ -78,16 +78,16 @@ member_datas = {
         'mbti': 'ISTP',
         'tmi': '헬스케어 잘알 계시면 연락바랍니다. 1조 화이팅!'
     },
-    3: {
-        'img_url': '../static/image/이규민.jpg',
-        'blog_url': 'https://blog.naver.com/verty9045',
-        'name': '이규민',
-        'introduce': '안녕하세요? 반갑습니다 ~~',
-        'programming_languages': ['html','CSS'],
-        'strength': '부족한점 을 노력으로 채울려고 한다',
-        'mbti': '모름',
-        'tmi': '다 같이 열공 해봐요!'
-    },
+    # 3: {
+    #     'img_url': '../static/image/이규민.jpg',
+    #     'blog_url': 'https://blog.naver.com/verty9045',
+    #     'name': '이규민',
+    #     'introduce': '안녕하세요? 반갑습니다 ~~',
+    #     'programming_languages': ['html','CSS'],
+    #     'strength': '부족한점 을 노력으로 채울려고 한다',
+    #     'mbti': '모름',
+    #     'tmi': '다 같이 열공 해봐요!'
+    # },
     4: {
         'img_url': '../static/image/이상일.jpg',
         'blog_url': 'https://silee-sw.tistory.com/',

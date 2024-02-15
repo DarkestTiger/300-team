@@ -25,6 +25,11 @@
             font-size: 20px;
         }
 
+        .card-body p {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
         .background-banner {
             background-image: linear-gradient(45deg,
                     rgb(51 43 43 / 75%),
@@ -251,14 +256,14 @@
         <div class="col">
             <div class="card team-info-col-heighit">
                 <div class="card-body">
-                    <span style="color: #fd6f00">
-                        <h3 class="card-title">우리팀 TMI / 팀원들에게 한마디</h3>
+                    <span style="font-size: 2em; color: #fd6f00">
+                        <h3 class="card-title">팀원들에게 한마디</h3>
                     </span>
                     <p>
                         이준승 INTP : 화이팅<br>
                         이상일 ISFP : 다같이 돈 잘버는 곳으로 취업해요~<br>
                         권진우 ISFJ : 다들 화이팅 해요 <br>
-                        이규민 ???? : 다 같이 열공 해봐요!<br>
+                        <!-- 이규민 ???? : 다 같이 열공 해봐요!<br> -->
                         이현기 ISTP : 앞으로 잘부탁드립니다!<br>
                     </p>
                 </div>
@@ -333,14 +338,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <div class="card border-0">
                     <img id="members3" class="rtan pointer" src="{{ url_for('static', filename='image/이규민.jpg') }}"
                         alt="" data-href="{{url_for('members3')}}">
                     <div class="card-body">
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="col">
                 <div class="card border-0">
                     <img id="members4" class="rtan pointer" src="{{ url_for('static', filename='image/이상일.jpg') }}"
@@ -450,7 +455,7 @@
                             ul.classList.add('list-group')
                             ul.classList.add('list-group-horizontal')
 
-                            
+
                             const li = document.createElement('li');
                             li.classList.add("list-group-item")
                             li.textContent = text
