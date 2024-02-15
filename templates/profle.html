@@ -23,8 +23,9 @@
       }
 
       .box_1 h2 {
-        text-align: right;
-        margin: 30px;
+        width: 200px;
+        text-align: center;
+        margin: 15px;
       }
 
       .box_2 {
@@ -97,37 +98,30 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="box_1">
-        <div>
-          <img
-            src="{{ url_for('static', filename='data.img_url') }}"
-            style="
-              width: 190px;
-              display: block;
-              border-radius: 80px;
-              box-shadow: 7px 7px 10px#ffffff;
-              border: 1px solid #ffffff;
-            "
-            alt=""
-          />
-          <img
-            src="{{ url_for('static', filename='image/rtan00.jpg') }}"
-            style="
-              width: 190px;
-              display: block;
-              border-radius: 80px;
-              box-shadow: 7px 7px 10px#ffffff;
-              border: 1px solid #ffffff;
-            "
-            alt=""
-          />
+    <div class="wrap">
+      <div class="container">
+        <div class="box_1">
+          <div>
+            <img
+              src="../static/image/이준승.jpg"
+              style="
+                width: 190px;
+                display: block;
+                border-radius: 80px;
+                box-shadow: 7px 7px 10px#ffffff;
+                border: 1px solid #ffffff;
+              "
+              alt=""
+            />
+          </div>
+          <div>
+            <a href="https://itsallmyworld.tistory.com/">
+              <span style="color: #fd6f00;">
+                <h2>블로그 링크</h2> 
+              </span>
+            </a>            
+          </div>
         </div>
-        <div>
-          <h2>{{data.img_url}}</h2>
-          <h2>{{data.blog_url}}</h2>
-        </div>
-      </div>
 
       <div class="box_2">
         <h1>{{data.name}}</h1>
