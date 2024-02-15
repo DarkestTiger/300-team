@@ -30,3 +30,5 @@ instance/
 Thumbs.db
 
 venv/
+
+database.db

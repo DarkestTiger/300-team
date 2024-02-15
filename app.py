@@ -74,14 +74,14 @@ member_datas = {
         'tmi': '헬스케어 잘알 계시면 연락바랍니다. 1조 화이팅!'
     },
     3: {
-        'img_url': '',
-        'blog_url': '',
-        'name': '이규만',
-        'introduce': '',
-        'programming_languages': [],
-        'strength': '',
-        'mbti': '',
-        'tmi': ''
+        'img_url': '../static/image/이규민.jpg',
+        'blog_url': 'https://blog.naver.com/verty9045',
+        'name': '이규민',
+        'introduce': '안녕하세요? 반갑습니다 ~~',
+        'programming_languages': ['html','CSS'],
+        'strength': '부족한점 을 노력으로 채울려고 한다',
+        'mbti': '모름',
+        'tmi': '다 같이 열공 해봐요!'
     },
     4: {
         'img_url': '../static/image/이상일.jpg',
@@ -94,14 +94,14 @@ member_datas = {
         'tmi': '머리털은 취업하고 자를 예정입니다...'
     },
     5: {
-        'img_url': '',
-        'blog_url': '',
+        'img_url': '../static/image/권진우.png',
+        'blog_url': 'https://blog.naver.com/rkdvo10',
         'name': '권진우',
-        'introduce': '',
-        'programming_languages': ['', ''],
-        'strength': '',
-        'mbti': '',
-        'tmi': ''
+        'introduce': '안녕하세요 저는 권진우입니다. 나의 꿈은 팀원들이 저를 믿을 수 있는 개발자가 되고 싶습니다.',
+        'programming_languages': ['HTML', 'CSS', 'Python', 'JS'],
+        'strength': '사람들을 재밌게 해줍니다.',
+        'mbti': 'ISFJ',
+        'tmi': '다들 화이팅!'
     },
 }
 
