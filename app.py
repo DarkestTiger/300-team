@@ -64,14 +64,14 @@ member_datas = {
         'tmi': '스파르타 AI 6기 화이팅!'
     },
     2: {
-        'img_url': '',
-        'blog_url': '',
+        'img_url': '../static/image/이현기.jpg',
+        'blog_url': 'https://blog.naver.com/dldl5040',
         'name': '이현기',
-        'introduce': '',
-        'programming_languages': [],
-        'strength': '',
-        'mbti': '',
-        'tmi': ''
+        'introduce': '안녕하세요 이현기 입니다. 데이터분석직무를 희망하고 있습니다. 앞으로 잘 부탁 드리겠습니다.',
+        'programming_languages': ['html','c','css','Python'],
+        'strength': '깊게는 아니지만 얕게 여러분야를 배워 상대적으로 분야에 관계없이 적응을 잘 합니다.',
+        'mbti': 'ISTP',
+        'tmi': '헬스케어 잘알 계시면 연락바랍니다. 1조 화이팅!'
     },
     3: {
         'img_url': '',
