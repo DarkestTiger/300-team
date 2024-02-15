@@ -1,4 +1,5 @@
 import os
+import sys
 import flask
 from flask import Flask, render_template, request, url_for, Response
 from flask_sqlalchemy import SQLAlchemy
@@ -52,7 +53,7 @@ def createbooks():
 
 member_datas = {
     1: {
-        'img_url': 'image/rtan00.jpg',
+        'img_url': '../static/image/rtan00.jpg',
         'blog_url': 'https://silee-sw.tistory.com/',
         'name': '이준승',
         'introduce': '안녕하세요~\n르탄이에요',
@@ -113,7 +114,8 @@ def members(memberid):
     # replace \n -> <br>
     context['introduce'] = context['introduce'].replace('\n', '<br>')
 
-    return render_template('profle.html', data=context)
+    return render_template('profile_member.html', data=context)
+    # return render_template('profle.html', data=context)
 
 
 @app.route('/members/member1')
@@ -123,6 +125,7 @@ def members1():
 
 @app.route('/members/member2')
 def members2():
+    # return render_template('profle2.html')
     return flask.redirect(flask.url_for('members', memberid=2))
 
 
@@ -141,4 +144,9 @@ def members5():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+    if len(sys.argv) >= 2:
+        print(f'port = {sys.argv[1]}')
+        app.run(debug=True, port=sys.argv[1])
+    else:
+        app.run(debug=True, port=5000)
+
