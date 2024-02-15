@@ -1,6 +1,7 @@
 import os
 import sys
 import flask
+import copy
 from flask import Flask, render_template, request, url_for, Response
 from flask_sqlalchemy import SQLAlchemy
 
@@ -53,65 +54,69 @@ def createbooks():
 
 member_datas = {
     1: {
-        'img_url': '../static/image/rtan00.jpg',
-        'blog_url': 'https://silee-sw.tistory.com/',
+        'img_url': '../static/image/이준승.jpg',
+        'blog_url': 'https://itsallmyworld.tistory.com/',
         'name': '이준승',
-        'introduce': '안녕하세요~\n르탄이에요',
-        'programming_languages': ['java', 'python', 'html'],
-        'strength': '멍떄리기',
-        'mbti': 'ISFP',
-        'tmi': '자전거 여행 좋아합니다~ 같이 하실분 DM 주세요~'
+        'introduce': '안녕하세요, 저는 이 준승 이에요\n저는 AI 웹 개발자가 되는것이 꿈이에요.',
+        'programming_languages': ['html', 'CSS', 'JS', 'Python'],
+        'strength': 'Ctrl + C , Ctrl + V',
+        'mbti': 'INTP',
+        'tmi': '스파르타 AI 6기 화이팅!'
     },
     2: {
-        'img_url': 'static/image/rtan00.jpg',
-        'blog_url': 'https://silee-sw.tistory.com/',
-        'name': '이상일',
-        'introduce': '안녕하세요~\n르탄이에요',
-        'programming_languages': ['java', 'python', 'html'],
-        'strength': '멍떄리기',
-        'mbti': 'ISFP',
-        'tmi': '자전거 여행 좋아합니다~ 같이 하실분 DM 주세요~'
+        'img_url': '',
+        'blog_url': '',
+        'name': '이현기',
+        'introduce': '',
+        'programming_languages': [],
+        'strength': '',
+        'mbti': '',
+        'tmi': ''
     },
     3: {
-        'img_url': 'static/image/rtan00.jpg',
-        'blog_url': 'https://silee-sw.tistory.com/',
-        'name': '이현기',
-        'introduce': '안녕하세요~\n르탄이에요',
-        'programming_languages': ['java', 'python', 'html'],
-        'strength': '멍떄리기',
-        'mbti': 'ISFP',
-        'tmi': '자전거 여행 좋아합니다~ 같이 하실분 DM 주세요~'
+        'img_url': '',
+        'blog_url': '',
+        'name': '이규만',
+        'introduce': '',
+        'programming_languages': [],
+        'strength': '',
+        'mbti': '',
+        'tmi': ''
     },
     4: {
-        'img_url': 'static/image/rtan00.jpg',
+        'img_url': '../static/image/이상일.jpg',
         'blog_url': 'https://silee-sw.tistory.com/',
-        'name': '권진우',
-        'introduce': '안녕하세요~\n르탄이에요',
-        'programming_languages': ['java', 'python', 'html'],
-        'strength': '멍떄리기',
+        'name': '이상일',
+        'introduce': '안녕하세요 이상일이라고 해요\n 대규모 트래픽이 발생하는 시스템의 \n백엔드 개발자를 목표하고 있어요',
+        'programming_languages': ['java', 'python'],
+        'strength': '코드 다듬기',
         'mbti': 'ISFP',
-        'tmi': '자전거 여행 좋아합니다~ 같이 하실분 DM 주세요~'
+        'tmi': '머리털은 취업하고 자를 예정입니다...'
     },
     5: {
-        'img_url': 'static/image/rtan00.jpg',
-        'blog_url': 'https://silee-sw.tistory.com/',
-        'name': '이규민',
-        'introduce': '안녕하세요~\n르탄이에요',
-        'programming_languages': ['java', 'python', 'html'],
-        'strength': '멍떄리기',
-        'mbti': 'ISFP',
-        'tmi': '자전거 여행 좋아합니다~ 같이 하실분 DM 주세요~'
+        'img_url': '',
+        'blog_url': '',
+        'name': '권진우',
+        'introduce': '',
+        'programming_languages': ['', ''],
+        'strength': '',
+        'mbti': '',
+        'tmi': ''
     },
 }
+
 
 @app.route('/members/<memberid>')
 def members(memberid):
     # member
     memberid = int(memberid)
     print(f'memberid={memberid}')
-    context = member_datas[memberid]
+    context = copy.deepcopy(member_datas[memberid])
 
     # replace \n -> <br>
+    languages = ', '.join(context['programming_languages'])
+
+    context['programming_languages'] = languages
     context['introduce'] = context['introduce'].replace('\n', '<br>')
 
     return render_template('profile_member.html', data=context)
@@ -125,13 +130,13 @@ def members1():
 
 @app.route('/members/member2')
 def members2():
-    # return render_template('profle2.html')
     return flask.redirect(flask.url_for('members', memberid=2))
 
 
 @app.route('/members/member3')
 def members3():
     return flask.redirect(flask.url_for('members', memberid=3))
+
 
 @app.route('/members/member4')
 def members4():
@@ -149,4 +154,3 @@ if __name__ == '__main__':
         app.run(debug=True, port=sys.argv[1])
     else:
         app.run(debug=True, port=5000)
-
