@@ -29,7 +29,7 @@ with app.app_context():
 def home():
     books = BookMsg.query.order_by('id').all()
     # print(books)
-    print(f'home called')
+    # print(f'home called')
     return render_template('index.html', data=books)
 
 
@@ -42,12 +42,12 @@ def get_books():
 def createbooks():
     # form에서 가져온 데이터 받아오기
     username_recieve = request.form.get('username')
-    print(username_recieve)
+    # print(username_recieve)
     msg_recieve = request.form.get('msg')
-    print(msg_recieve)
+    # print(msg_recieve)
     # 데이터 db에 저장하기
     book = BookMsg(name=username_recieve, message=msg_recieve)
-    print(book)
+    # print(book)
     db.session.add(book)
     db.session.commit()
 
